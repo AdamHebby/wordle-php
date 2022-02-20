@@ -6,20 +6,6 @@
         "nesbot/carbon": "^2.57",
         "phpunit/phpunit": "^9.5"
     },
-    "scripts": {
-        "post-package-install":[
-            "./bin/download-words"
-        ],
-        "post-package-update": [
-            "./bin/download-words"
-        ],
-        "post-install-cmd": [
-            "./bin/download-words"
-        ],
-        "post-update-cmd": [
-            "./bin/download-words"
-        ]
-    },
     "autoload": {
         "psr-4": {
             "Wordle\\": "src/Wordle/",
