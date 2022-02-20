@@ -3,11 +3,15 @@
 
 namespace Wordle;
 
-require_once __DIR__ . '/../vendor/autoload.php';
+if (file_exists(__DIR__ . '/../vendor/autoload.php')) {
+    require_once __DIR__ . '/../vendor/autoload.php';
+} else {
+    // Composer global required
+    require_once __DIR__ . '/../../../autoload.php';
+}
 
 use Wordle\Generators\DailyWordGenerator;
 use Wordle\Generators\RandomWordGenerator;
-use Wordle\Output\KeyboardOutput;
 
 $generator = !empty($argv[1])
     ? new RandomWordGenerator($argv[1])
