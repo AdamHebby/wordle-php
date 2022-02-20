@@ -13,11 +13,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Setup PHP
-      uses: shivammathur/setup-php@v2
-      with:
-        php-version: '7.4'
-        extensions: pspell
+    - name: Install aspell-en
+      run: sudo apt-get install aspell-en
 
     - name: Validate composer.json and composer.lock
       run: composer validate --strict
