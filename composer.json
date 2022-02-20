@@ -4,8 +4,22 @@
     "type": "project",
     "require-dev": {
         "nesbot/carbon": "^2.57",
-        "phpunit/phpunit": "^9.5"
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3.6",
+        "phpstan/phpstan": "^1.4"
     },
+    "scripts": {
+        "phpunit": [
+            "XDEBUG_MODE=coverage php vendor/bin/phpunit"
+        ],
+        "phpcs": [
+            "php vendor/bin/phpcs --standard=PSR12 src/ tests/Wordle/"
+        ],
+        "phpstan": [
+            "php vendor/bin/phpstan analyse --level 6 src/"
+        ]
+    },
+    "license": "GPL-3.0-or-later",
     "autoload": {
         "psr-4": {
             "Wordle\\": "src/Wordle/",
@@ -14,9 +28,10 @@
     },
     "authors": [
         {
+            "role": "Owner & Author",
             "name": "AdamHebby",
-            "email": "adam@adamhebden.com"
+            "email": "adam@adamhebden.com",
+            "homepage": "https://github.com/AdamHebby"
         }
-    ],
-    "require": {}
+    ]
 }
