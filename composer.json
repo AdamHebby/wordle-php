@@ -19,6 +19,7 @@
             "php vendor/bin/phpstan analyse --level 6 src/"
         ]
     },
+    "license": "GPL-3.0-or-later",
     "autoload": {
         "psr-4": {
             "Wordle\\": "src/Wordle/",
@@ -27,8 +28,10 @@
     },
     "authors": [
         {
+            "role": "Owner & Author",
             "name": "AdamHebby",
-            "email": "adam@adamhebden.com"
+            "email": "adam@adamhebden.com",
+            "homepage": "https://github.com/AdamHebby"
         }
     ]
 }
