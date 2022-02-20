@@ -33,3 +33,8 @@ Like the last command, replace LENGTH with any number between 4 and 9 (inclusive
 
 If your friend has tried word #123, you can replace WORD_NUMBER with this to use try the same word!
 
+## Installation
+
+`composer global require adamhebby/wordle-php`
+
+Then you can run `wordle` from anywhere, assuming you have composer in your path.
