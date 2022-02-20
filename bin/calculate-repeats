@@ -1,0 +1,37 @@
+#!/usr/bin/env php
+<?php
+
+namespace Wordle;
+
+ini_set('memory_limit', '12G');
+
+use Wordle\Generators\DailyWordGenerator;
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+$date = new \DateTime('2022-01-01', new \DateTimeZone('UTC'));
+$max  = new \DateTime('2030-01-01', new \DateTimeZone('UTC'));
+$generator = new DailyWordGenerator();
+
+$words = [];
+$count = 0;
+do {
+    $generator->setDate($date);
+    $dateString = $date->format('Y-m-d');
+    $word = $generator->generateWord();
+    if (!isset($words[$word])) $words[$word] = [];
+    $words[$word][] = $dateString;
+
+    if ($count % 100 === 0) {
+        echo "$dateString           \r";
+    }
+
+    $date->add(new \DateInterval('P1D'));
+    $count++;
+} while ($date < $max);
+
+uasort($words, function ($a, $b) {
+    return count($a) < count($b);
+});
+
+print_r(array_slice($words, 0, 50, true));

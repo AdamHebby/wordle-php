@@ -1,0 +1,22 @@
+{
+    "name": "adamhebby/wordle-php",
+    "description": "Wordle written in PHP, complete with a random Daily word",
+    "type": "project",
+    "require-dev": {
+        "nesbot/carbon": "^2.57",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wordle\\": "src/Wordle/",
+            "Wordle\\Tests\\": "tests/Wordle/"
+        }
+    },
+    "authors": [
+        {
+            "name": "AdamHebby",
+            "email": "adam@adamhebden.com"
+        }
+    ],
+    "require": {}
+}

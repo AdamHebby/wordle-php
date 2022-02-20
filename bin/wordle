@@ -1,0 +1,29 @@
+#!/usr/bin/env php
+<?php
+
+namespace Wordle;
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use Wordle\Generators\DailyWordGenerator;
+use Wordle\Generators\RandomWordGenerator;
+use Wordle\Output\KeyboardOutput;
+
+$generator = !empty($argv[1])
+    ? new RandomWordGenerator($argv[1])
+    : new DailyWordGenerator(DailyWordGenerator::DEFAULT_WORD_LENGTH);
+
+if (!empty($argv[2])) {
+    $generator->setWordIndex(intval($argv[2]));
+}
+
+$wordle = new Wordle($generator);
+
+do {
+    $guess = readline('Enter Your Guess: ');
+
+    $wordle->attemptGuess($guess);
+
+    echo $wordle->getOutput();
+
+} while (!$wordle->isValidGuess($guess));

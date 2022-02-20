@@ -1,0 +1,42 @@
+#!/usr/bin/env php
+<?php
+
+namespace Wordle;
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+$tempFile = '/tmp/popular.txt';
+
+if (file_exists(__DIR__ . '/../resources/4-letter-words.txt')) {
+    exec('rm ./resources/*-letter-words.txt');
+}
+
+file_put_contents(
+    $tempFile,
+    file_get_contents('https://raw.githubusercontent.com/dolph/dictionary/master/popular.txt')
+);
+
+$validator = new Validator;
+$counts = [];
+
+$fh = fopen($tempFile, 'r');
+while (($data = fgets($fh)) !== false) {
+    $len = strlen(trim($data));
+
+    if ($len > 3 && $len < 10) {
+        $data = trim($data);
+        $counts[$len] = ($counts[$len] ?? 0) + 1;
+
+        if ($validator->validateRealWord($data)) {
+            file_put_contents(
+                __DIR__ . "/../resources/{$len}-letter-words.txt",
+                "$data\n",
+                FILE_APPEND
+            );
+        }
+    }
+}
+
+print_r($counts);
+
+unlink($tempFile);

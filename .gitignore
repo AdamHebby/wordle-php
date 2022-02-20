@@ -1,0 +1,4 @@
+/vendor/
+tests/coverage/
+resources/*-letter-words.txt
+.phpunit.cache
