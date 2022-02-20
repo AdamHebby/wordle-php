@@ -41,7 +41,7 @@ jobs:
       run: composer phpstan
 
     - name: Generate test coverage badge
-      uses: ./
+      uses: timkrase/phpunit-coverage-badge@v1.2.0
       with:
         coverage_badge_path: 'badge.svg'
         push_badge: true
