@@ -2,12 +2,15 @@
     "name": "adamhebby/wordle-php",
     "description": "Wordle written in PHP, complete with a random Daily word",
     "type": "project",
-    "require-dev": {
-        "nesbot/carbon": "^2.57",
-        "phpunit/phpunit": "^9.5",
-        "squizlabs/php_codesniffer": "^3.6",
-        "phpstan/phpstan": "^1.4"
-    },
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "role": "Owner & Author",
+            "name": "AdamHebby",
+            "email": "adam@adamhebden.com",
+            "homepage": "https://github.com/AdamHebby"
+        }
+    ],
     "scripts": {
         "phpunit": [
             "XDEBUG_MODE=coverage php vendor/bin/phpunit"
@@ -19,19 +22,19 @@
             "php vendor/bin/phpstan analyse --level 6 src/"
         ]
     },
-    "license": "GPL-3.0-or-later",
     "autoload": {
         "psr-4": {
             "Wordle\\": "src/Wordle/",
             "Wordle\\Tests\\": "tests/Wordle/"
         }
     },
-    "authors": [
-        {
-            "role": "Owner & Author",
-            "name": "AdamHebby",
-            "email": "adam@adamhebden.com",
-            "homepage": "https://github.com/AdamHebby"
-        }
-    ]
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "nesbot/carbon": "^2.57",
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3.6",
+        "phpstan/phpstan": "^1.4"
+    }
 }
