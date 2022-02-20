@@ -31,6 +31,7 @@
     "require": {
         "php": ">=7.4"
     },
+    "bin": "bin/wordle",
     "require-dev": {
         "nesbot/carbon": "^2.57",
         "phpunit/phpunit": "^9.5",
