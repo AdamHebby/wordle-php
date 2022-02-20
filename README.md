@@ -1,3 +1,5 @@
+![Coverage](.github/badges/coverage.svg)
+
 # Wordle (PHP)
 
 My implementation of Wordle in PHP.
