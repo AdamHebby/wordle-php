@@ -42,6 +42,6 @@ class RandomWordGeneratorTest extends TestCase
         $generator = new RandomWordGenerator();
         $generator->setWordIndex(1);
 
-        $this->assertSame('abbey', $generator->generateWord());
+        $this->assertSame('aback', $generator->generateWord());
     }
 }

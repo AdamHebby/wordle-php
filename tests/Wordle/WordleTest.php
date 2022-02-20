@@ -152,6 +152,13 @@ class WordleTest extends TestCase
             $output
         );
     }
+
+    public function testGeneratorReturnsNull() {
+        $generator = new FixedTestGenerator();
+        $this->expectException(\Exception::class);
+        $wordle = new Wordle($generator);
+        $wordle->attemptGuess("Throws");
+    }
     private static function formatMany(array $data): string
     {
         $returnString = "";

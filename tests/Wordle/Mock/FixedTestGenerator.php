@@ -15,11 +15,14 @@ class FixedTestGenerator extends BaseGenerator
     {
         $key = array_key_first($this->testWords);
 
-        $word = $this->testWords[$key];
+        if (isset($this->testWords[$key])) {
+            $word = $this->testWords[$key];
+            unset($this->testWords[$key]);
 
-        unset($this->testWords[$key]);
+            return $word;
+        }
 
-        return $word;
+        return "";
     }
 
     public function getShareString(): string

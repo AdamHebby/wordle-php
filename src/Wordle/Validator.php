@@ -30,13 +30,7 @@ class Validator
             pspell_new('en')
         ];
 
-        foreach ($dicts as $dict) {
-            if (!is_int($dict)) {
-                throw new \Exception('Dictionary not loaded');
-            }
-        }
-
-        // @phan-suppress-next-line Validated dictionaries are ints
+        // @phan-suppress-next-line
         $this->dictionaries = $dicts;
     }
 
