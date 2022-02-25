@@ -10,7 +10,12 @@
  */
 namespace Wordle;
 
-require_once __DIR__ . '/../vendor/autoload.php';
+if (file_exists(__DIR__ . '/../vendor/autoload.php')) {
+    require_once __DIR__ . '/../vendor/autoload.php';
+} else {
+    // Composer global required
+    require_once __DIR__ . '/../../../autoload.php';
+}
 
 $validator = new Validator;
 $tempFile  = '/tmp/wordle-popular';
