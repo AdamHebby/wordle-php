@@ -2,7 +2,6 @@ abandon
 abdomen
 abetted
 abiding
-abigail
 ability
 abolish
 abreast
@@ -60,10 +59,7 @@ airlift
 airline
 airport
 airways
-alameda
 alarmed
-alastor
-alcazar
 alchemy
 alcohol
 alerted
@@ -102,7 +98,6 @@ anatomy
 anchors
 ancient
 android
-angelus
 angling
 angrier
 angrily
@@ -169,7 +164,6 @@ assures
 astound
 asunder
 athlete
-attaboy
 attache
 attacks
 attempt
@@ -216,11 +210,9 @@ ballast
 balloon
 ballots
 baloney
-bambino
 bananas
 bandage
 bandits
-bangers
 banging
 bangles
 bankers
@@ -251,7 +243,6 @@ bashful
 bashing
 baskets
 basking
-bassett
 bassoon
 bastard
 bathing
@@ -270,7 +261,6 @@ beanbag
 bearded
 bearers
 bearing
-beastie
 beating
 beatnik
 beavers
@@ -303,7 +293,6 @@ benches
 bending
 beneath
 benefit
-benthic
 bequest
 berries
 berserk
@@ -314,7 +303,6 @@ betting
 between
 bicycle
 bidding
-bigfoot
 biggest
 bighorn
 bigness
@@ -387,7 +375,6 @@ boobies
 booking
 bookish
 booklet
-bookman
 boombox
 boonies
 boorish
@@ -442,7 +429,6 @@ brigade
 brioche
 brisket
 briskly
-bristol
 brittle
 broader
 broiled
@@ -456,7 +442,6 @@ bruised
 bruises
 brushed
 brushes
-bubbies
 bubbles
 buckets
 buckled
@@ -490,7 +475,6 @@ bunnies
 bunting
 burdens
 burgers
-burgess
 burglar
 burning
 burnout
@@ -527,7 +511,6 @@ calling
 callous
 calming
 calorie
-calzone
 cameras
 campers
 camping
@@ -538,7 +521,6 @@ candies
 candles
 canines
 cannery
-cannoli
 cannons
 canteen
 canvass
@@ -553,14 +535,12 @@ capsule
 captain
 captive
 capture
-caramba
 caramel
 carcass
 cardiac
 careers
 careful
 caribou
-caritas
 carmine
 carotid
 carpool
@@ -574,14 +554,12 @@ cartons
 cartoon
 carvers
 carving
-carwash
 cascade
 cashews
 cashier
 cashing
 casings
 casinos
-casitas
 caskets
 casting
 castles
@@ -595,9 +573,7 @@ caution
 cavalry
 caveman
 caverns
-caymans
 ceiling
-celeste
 cellars
 cellist
 censure
@@ -617,7 +593,6 @@ changed
 changes
 channel
 chaotic
-chapman
 chapped
 chapter
 charade
@@ -626,7 +601,6 @@ charger
 charges
 chariot
 charity
-charley
 charlie
 charmed
 charmer
@@ -655,7 +629,6 @@ chemist
 cherish
 chevron
 chewing
-chicano
 chicken
 chiffon
 chigger
@@ -671,8 +644,6 @@ chooses
 chopped
 chopper
 chowder
-christy
-chromic
 chronic
 chucked
 chuckle
@@ -749,7 +720,6 @@ colleen
 college
 collide
 collier
-collins
 cologne
 colonel
 colored
@@ -852,13 +822,11 @@ courted
 cousins
 couture
 covered
-coverup
 coveted
 cowards
 cowboys
 cowgirl
 coyotes
-cozying
 cracked
 cracker
 crafted
@@ -869,7 +837,6 @@ cranium
 crapped
 crapper
 crashed
-crasher
 crashes
 craving
 crawled
@@ -891,8 +858,6 @@ crimson
 cripple
 critics
 critter
-croaker
-crocket
 cronies
 crooked
 cropped
@@ -919,7 +884,6 @@ crusher
 crushes
 cryptic
 crystal
-cubbies
 cubicle
 cuddled
 cuddles
@@ -1022,7 +986,6 @@ delving
 demands
 demonic
 demoted
-denning
 density
 dentist
 denying
@@ -1069,7 +1032,6 @@ diamond
 diapers
 diaries
 dickens
-dicking
 dictate
 dieting
 differs
@@ -1148,7 +1110,6 @@ dreaded
 dreamed
 dreamer
 dredged
-dreidel
 dressed
 dresser
 dresses
@@ -1186,7 +1147,6 @@ dunking
 durable
 dusting
 dutiful
-dwarves
 dweller
 dynamic
 dynasty
@@ -1204,7 +1164,6 @@ echelon
 eclipse
 economy
 ecstasy
-ectopic
 editing
 edition
 editors
@@ -1216,7 +1175,6 @@ elapsed
 elastic
 elderly
 elected
-electro
 elegant
 element
 elevate
@@ -1239,7 +1197,6 @@ enabled
 enables
 enacted
 enchant
-encinas
 encoded
 endings
 endless
@@ -1250,7 +1207,6 @@ enforce
 engaged
 engages
 engines
-english
 enhance
 enjoyed
 enraged
@@ -1282,7 +1238,6 @@ essence
 eternal
 ethanol
 ethical
-eugenia
 evasive
 evening
 evicted
@@ -1340,7 +1295,6 @@ fainter
 fairest
 fairies
 fairway
-falafel
 fallacy
 falling
 fallout
@@ -1375,7 +1329,6 @@ feeders
 feeding
 feelers
 feeling
-fellahs
 fellers
 felling
 fellows
@@ -1545,14 +1498,12 @@ furlong
 furnace
 further
 furtive
-fusilli
 fussing
 futures
 gabbing
 gagging
 gainful
 gaining
-galilee
 gallant
 gallery
 galling
@@ -1578,7 +1529,6 @@ gayness
 gazelle
 gearing
 geezers
-geishas
 gelatin
 general
 generic
@@ -1589,7 +1539,6 @@ gentler
 genuine
 geology
 gerbils
-germans
 gestapo
 gesture
 getaway
@@ -1598,9 +1547,7 @@ ghastly
 ghettos
 gibbons
 giblets
-giddyup
 giggles
-gilbert
 ginseng
 giraffe
 gizzard
@@ -1632,9 +1579,7 @@ gondola
 goobers
 goodbye
 goodies
-goodman
 goofing
-goonies
 gorilla
 gossips
 gouging
@@ -1645,11 +1590,9 @@ gracing
 graders
 grading
 grammar
-grandad
 grander
 grandma
 grandpa
-granger
 granite
 granola
 granted
@@ -1708,7 +1651,6 @@ gypsies
 habitat
 hackers
 hacking
-hackman
 hacksaw
 hailing
 haircut
@@ -1728,7 +1670,6 @@ handing
 handled
 handler
 handles
-handoff
 handout
 hangers
 hanging
@@ -1762,7 +1703,6 @@ hawking
 haycock
 hayloft
 hayseed
-hayward
 haywire
 hazards
 heading
@@ -1774,7 +1714,6 @@ healthy
 heaping
 hearing
 hearsay
-hearted
 heathen
 heather
 heating
@@ -1810,13 +1749,11 @@ hideous
 hideout
 highest
 highway
-hijinks
 hilltop
 himself
 hinting
 hippest
 hippies
-hisself
 hissing
 history
 hitched
@@ -1833,7 +1770,6 @@ holders
 holding
 holiday
 holiest
-holland
 hollers
 holster
 hombres
@@ -1856,9 +1792,7 @@ hostage
 hostess
 hostile
 hosting
-hotdogs
 hothead
-hotline
 hotshot
 hottest
 hounded
@@ -1868,7 +1802,6 @@ howling
 hubcaps
 huddled
 huffing
-huggers
 hugging
 hulking
 humanly
@@ -1990,12 +1923,10 @@ itching
 ivories
 jackals
 jackass
-jackers
 jackets
 jacking
 jackpot
 jaguars
-jammies
 jamming
 janitor
 jarring
@@ -2003,15 +1934,11 @@ jasmine
 javelin
 jawbone
 jealous
-jeepers
 jellies
 jerking
-jerries
 jerseys
-jesuits
 jeweler
 jewelry
-jezebel
 jimmies
 jingles
 jitters
@@ -2025,7 +1952,6 @@ journal
 journey
 jubilee
 judging
-jughead
 jugular
 jujitsu
 jukebox
@@ -2039,12 +1965,9 @@ junkies
 justice
 justify
 karaoke
-kashmir
 keepers
 keeping
-keister
 ketchup
-keycard
 keyhole
 keynote
 kicking
@@ -2071,7 +1994,6 @@ knocker
 knotted
 knowing
 knuckle
-kremlin
 labeled
 labored
 lackeys
@@ -2081,10 +2003,7 @@ lactose
 ladders
 laddies
 lagging
-lambert
-landers
 landing
-langley
 lantern
 lanyard
 lapping
@@ -2188,7 +2107,6 @@ lowdown
 lowered
 lowlife
 loyalty
-lucifer
 luckier
 luckily
 luggage
@@ -2202,7 +2120,6 @@ lyrical
 machete
 machine
 madness
-madonna
 maestro
 maggots
 magical
@@ -2271,7 +2188,6 @@ matters
 matured
 maudlin
 maximum
-maxwell
 mayoral
 meadows
 meanest
@@ -2279,7 +2195,6 @@ meaning
 measles
 measure
 meddled
-medevac
 medical
 meeting
 melding
@@ -2348,7 +2263,6 @@ modesty
 modicum
 molding
 mollusk
-momento
 moments
 mommies
 mongrel
@@ -2362,9 +2276,7 @@ monthly
 moocher
 moonlit
 mopping
-morales
 morally
-morello
 morgues
 morning
 morocco
@@ -2402,7 +2314,6 @@ mystery
 nagging
 nailing
 naivete
-nametag
 nannies
 napkins
 napping
@@ -2411,7 +2322,6 @@ narwhal
 nations
 natives
 natural
-natured
 naughty
 nearest
 necking
@@ -2432,7 +2342,6 @@ nightly
 nipping
 nipples
 nirvana
-nitrous
 nodding
 nodules
 nomadic
@@ -2440,7 +2349,6 @@ nominal
 nominee
 nonstop
 noodles
-norland
 norther
 nostril
 notable
@@ -2452,7 +2360,6 @@ noticed
 notices
 notions
 nourish
-nouveau
 novelty
 nowhere
 noxious
@@ -2564,7 +2471,6 @@ palette
 pampers
 panache
 pancake
-pandora
 panicky
 panther
 panties
@@ -2692,7 +2598,6 @@ pinning
 pioneer
 pirated
 pirates
-pissant
 pissing
 pistols
 pistons
@@ -2725,7 +2630,6 @@ playful
 playing
 pleaded
 pleased
-pleaser
 pleases
 pledged
 pledges
@@ -2746,7 +2650,6 @@ polecat
 pollack
 pollard
 polling
-pollock
 pollute
 pompoms
 pompous
@@ -2776,7 +2679,6 @@ potions
 pottery
 potting
 poultry
-pounder
 pouring
 pouting
 poverty
@@ -2799,7 +2701,6 @@ premise
 premium
 prepare
 prepped
-preppie
 present
 presets
 preside
@@ -2850,7 +2751,6 @@ prosper
 protect
 protein
 protest
-proteus
 protons
 prouder
 proudly
@@ -2901,7 +2801,6 @@ quantum
 quarrel
 quarter
 quartet
-queller
 quibble
 quicker
 quickie
@@ -2911,7 +2810,6 @@ quietly
 quinine
 quintet
 quitter
-quixote
 quizzes
 quoting
 rabbits
@@ -2947,7 +2845,6 @@ rappers
 raptors
 rapture
 rascals
-rathole
 ratings
 rations
 ratting
@@ -3062,7 +2959,6 @@ rescuer
 rescues
 resents
 reserve
-reshoot
 resides
 residue
 resolve
@@ -3107,7 +3003,6 @@ richest
 rickety
 ridding
 riddled
-riddler
 riddles
 rifling
 rigging
@@ -3132,7 +3027,6 @@ roasted
 robbers
 robbery
 robbing
-robbins
 robotic
 rockers
 rockets
@@ -3189,7 +3083,6 @@ sailing
 sailors
 saintly
 salient
-salinas
 saluted
 salvage
 sampled
@@ -3207,7 +3100,6 @@ sangria
 sapiens
 sarcasm
 sardine
-sashimi
 satanic
 satchel
 satisfy
@@ -3249,7 +3141,6 @@ scooter
 scoping
 scoring
 scorned
-scottie
 scoured
 scourge
 scouted
@@ -3262,7 +3153,6 @@ screams
 screech
 screens
 screwed
-screwup
 scripts
 scrolls
 scrooge
@@ -3305,7 +3195,6 @@ sensing
 sensors
 sensory
 sensual
-seppuku
 sequins
 serious
 sermons
@@ -3350,7 +3239,6 @@ shelves
 sheriff
 shields
 shifted
-shifter
 shimmer
 shindig
 shingle
@@ -3380,7 +3268,6 @@ shrouds
 shuffle
 shunned
 shuttle
-shylock
 shyness
 sibling
 sickens
@@ -3425,7 +3312,6 @@ skilled
 skillet
 skimmed
 skinned
-skinner
 skipped
 skipper
 slacker
@@ -3525,7 +3411,6 @@ sources
 soviets
 soybean
 spacing
-spackle
 spandex
 spaniel
 spanked
@@ -3546,10 +3431,8 @@ specify
 specter
 spectra
 spectre
-speedos
 spelled
 speller
-spencer
 spender
 spewing
 spiders
@@ -3601,7 +3484,6 @@ stamina
 stamped
 stamper
 standby
-standup
 stapled
 stapler
 stardom
@@ -3622,7 +3504,6 @@ stature
 statute
 staunch
 staying
-stealer
 stealth
 steamed
 steamer
@@ -3637,15 +3518,12 @@ steroid
 sticker
 stickup
 stiffer
-stifler
 stimuli
 stinger
 stirred
 stocked
 stomach
 stomped
-stomper
-stoolie
 stooped
 stopped
 storage
@@ -3676,7 +3554,6 @@ studios
 stuffed
 stumble
 stumped
-stumper
 stunned
 stunted
 stutter
@@ -3714,7 +3591,6 @@ sundown
 sunless
 sunning
 sunrise
-sunroom
 sunsets
 support
 suppose
@@ -3780,7 +3656,6 @@ tangled
 tankers
 tanking
 tanning
-tantric
 tantrum
 tapered
 tapioca
@@ -3858,7 +3733,6 @@ tickles
 tidbits
 tidings
 tidying
-tiffany
 tighten
 tighter
 tightly
@@ -3978,7 +3852,6 @@ turnout
 turtles
 tuxedos
 tweaked
-tweedle
 twelfth
 twinkle
 twisted
@@ -4068,8 +3941,6 @@ venting
 venture
 veranda
 verdict
-veritas
-vermeil
 version
 vertigo
 vespers
@@ -4148,7 +4019,6 @@ wearing
 weasels
 weather
 webbing
-webster
 wedding
 wedgies
 wedlock
@@ -4202,13 +4072,11 @@ windbag
 winding
 windows
 winging
-wingman
 winking
 winners
 winning
 winters
 wiretap
-wiseass
 wishful
 wishing
 witches
@@ -4259,7 +4127,6 @@ yawning
 yearned
 yelling
 yoghurt
-yonkers
 younger
 yuppies
 zephyrs

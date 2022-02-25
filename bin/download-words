@@ -1,18 +1,49 @@
-#!/bin/bash
+#!/usr/bin/env php
+<?php
 
-curl -s https://raw.githubusercontent.com/dolph/dictionary/master/popular.txt > /tmp/popular.txt
+/**
+ * Wordle Word downloader.
+ *
+ * Downloads words, validates & sorts them
+ *
+ * Really fast!
+ */
+namespace Wordle;
 
-if test -f resources/4-letter-words.txt
-then
-    rm resources/*-letter-words.txt
-fi
+require_once __DIR__ . '/../vendor/autoload.php';
 
-while read line; do
-    SIZE=${#line}
-    if [[ "$SIZE" -gt 3 && "$SIZE" -lt 10 ]];
-    then
-        echo $line >> resources/$SIZE-letter-words.txt
-    fi
-done < /tmp/popular.txt
+$validator = new Validator;
+$tempFile  = '/tmp/wordle-popular';
+$dir       = __DIR__ . '/../';
 
-rm /tmp/popular.txt
+if (file_exists($dir . '/resources/4-letter-words.txt')) {
+    exec("rm {$dir}/resources/*-letter-words.txt");
+}
+
+if (!file_exists($tempFile)) {
+    file_put_contents(
+        $tempFile,
+        file_get_contents('https://raw.githubusercontent.com/dolph/dictionary/master/popular.txt')
+    );
+}
+
+$fh = fopen($tempFile, 'r');
+
+while (($line = fgets($fh)) !== false) {
+    $line = trim($line);
+    $len = strlen($line);
+
+    if ($len > 3 && $len < 10 && $validator->validateRealWord($line)) {
+        file_put_contents(
+            "{$tempFile}_{$len}_val",
+            "$line\n",
+            FILE_APPEND
+        );
+    }
+}
+
+for ($i = 4; $i < 10; $i++) {
+    exec("mv {$tempFile}_{$i}_val ${dir}/resources/$i-letter-words.txt");
+}
+
+exec("rm {$tempFile}_*");
