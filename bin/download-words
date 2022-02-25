@@ -45,5 +45,3 @@ while (($line = fgets($fh)) !== false) {
 for ($i = 4; $i < 10; $i++) {
     exec("mv {$tempFile}_{$i}_val ${dir}/resources/$i-letter-words.txt");
 }
-
-exec("rm {$tempFile}_*");
