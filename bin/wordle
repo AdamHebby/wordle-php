@@ -12,7 +12,12 @@ if (file_exists(__DIR__ . '/../vendor/autoload.php')) {
 
 // If we don't have words, download them!
 if (!file_exists(__DIR__ . '/../resources/4-letter-words.txt')) {
-    exec(__DIR__ . '/download-words');
+    exec('php ' . __DIR__ . '/download-words', $output, $returnCode);
+
+    if (!empty($output) || $returnCode !== 0) {
+        echo implode($output) . "\n";
+        exit();
+    }
 }
 
 use Wordle\Generators\DailyWordGenerator;
