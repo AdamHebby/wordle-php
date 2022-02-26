@@ -1,4 +1,4 @@
-![Coverage](.github/badges/coverage.svg)
+![Coverage](https://github.com/AdamHebby/wordle-php/.github/badges/coverage.svg)
 
 # Wordle (PHP)
 
@@ -12,13 +12,17 @@ Features:
 
 ## Usage
 
+If git cloning, use `bin/wordle`, if installing globally use `wordle`.
+
 ### Daily Word
-Command: `bin/wordle`
+Command: `wordle`
 
 Will get the daily word without internet access. The daily word is generated using a seeded random number, the seed will be the current date in UTC.
 
+<img height="250px" src="https://github.com/AdamHebby/wordle-php/.github/images/daily.png" alt="Daily Wordle">
+
 ### Random Words
-Command: `bin/wordle LENGTH`
+Command: `wordle LENGTH`
 
 Replace LENGTH with any number between 4 and 9 (inclusive).
 
@@ -26,12 +30,18 @@ This is entirely random.
 
 When you're done, it will tell you which number word you did, so your friends can try.
 
+<img height="250px" src="https://github.com/AdamHebby/wordle-php/.github/images/8-letters.png" alt="Random 8">
+
+<img height="250px" src="https://github.com/AdamHebby/wordle-php/.github/images/8-letters-end.png" alt="Random 8">
+
 ### Specific word
-Command: `bin/wordle LENGTH WORD_NUMBER`
+Command: `wordle LENGTH WORD_NUMBER`
 
 Like the last command, replace LENGTH with any number between 4 and 9 (inclusive).
 
 If your friend has tried word #123, you can replace WORD_NUMBER with this to use try the same word!
+
+<img height="250px" src="https://github.com/AdamHebby/wordle-php/.github/images/8-letters-specific.png" alt="834">
 
 ## Installation
 
