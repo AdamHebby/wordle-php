@@ -77,10 +77,11 @@ class WordleTest extends TestCase
         $output = $wordle->getOutput();
 
         $this->assertStringContainsString(
-            self::formatMany([
-                ['rail', 'I', true],
-                ['s', 'G', true]
-            ]),
+            self::format(' R ', 'I', false) .
+            self::format(' A ', 'I', false) .
+            self::format(' I ', 'I', false) .
+            self::format(' L ', 'I', false) .
+            self::format(' S ', 'G', false),
             $output
         );
 
@@ -95,11 +96,11 @@ class WordleTest extends TestCase
         $output = $wordle->getOutput();
 
         $this->assertStringContainsString(
-            self::formatMany([
-                ['te', 'G', true],
-                ['a', 'I', true],
-                ['ts', 'G', true],
-            ]),
+            self::format(' T ', 'G', false) .
+            self::format(' E ', 'G', false) .
+            self::format(' A ', 'I', false) .
+            self::format(' T ', 'G', false) .
+            self::format(' S ', 'G', false),
             $output
         );
 
@@ -116,12 +117,11 @@ class WordleTest extends TestCase
         $output = $wordle->getOutput();
 
         $this->assertStringContainsString(
-            self::formatMany([
-                ['te', 'G', true],
-                ['a', 'I', true],
-                ['r', 'I', true],
-                ['s', 'G', true],
-            ]),
+            self::format(' T ', 'G', false) .
+            self::format(' E ', 'G', false) .
+            self::format(' A ', 'I', false) .
+            self::format(' R ', 'I', false) .
+            self::format(' S ', 'G', false),
             $output
         );
 
@@ -136,14 +136,10 @@ class WordleTest extends TestCase
         $wordle->attemptGuess('tests');
         $output = $wordle->getOutput();
 
-        $this->assertStringContainsString(
-            self::format('tests', 'G', false),
-            $output
-        );
         $this->assertStringNotContainsString('│' . self::format('E', 'G') . '│', $output);
 
+        $this->assertStringContainsString(self::format('tests', 'G', false), $output);
         $this->assertStringContainsString('TESTSHARESTRING', $output);
-
         $this->assertStringContainsString(
             "⬛⬛⬛⬛🟩\n" .
             "🟩🟩⬛🟩🟩\n" .
@@ -159,17 +155,6 @@ class WordleTest extends TestCase
         $this->expectException(\Exception::class);
         $wordle = new Wordle($generator);
         $wordle->attemptGuess("Throws");
-    }
-
-    private static function formatMany(array $data): string
-    {
-        $returnString = "";
-
-        foreach ($data as $key) {
-            $returnString .= self::format($key[0], $key[1], $key[2] ?? false);
-        }
-
-        return $returnString;
     }
 
     private static function format($char, $color, $each = false)

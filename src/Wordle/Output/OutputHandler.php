@@ -119,20 +119,31 @@ class OutputHandler implements OutputInterface
         $usedLetters = array_count_values($splitWord);
 
         foreach ($splitGuess as $key => $char) {
+            $upperChar = strtoupper($char);
+
             if ($char === ($splitWord[$key] ?? null) && ($usedLetters[$char] ?? 0) !== 0) {
-                $wordOutput .= OutputFormatter::formatString($char, OutputFormatter::FORMAT_GREEN);
+                $wordOutput .= OutputFormatter::formatString(
+                    " $upperChar ",
+                    OutputFormatter::FORMAT_GREEN
+                );
 
                 $this->keyboardOutput->colorCharKey($char, OutputFormatter::FORMAT_GREEN);
 
                 $finalResultWord .= "G";
             } elseif (in_array($char, $splitWord) && ($usedLetters[$char] ?? 0) !== 0) {
-                $wordOutput .= OutputFormatter::formatString($char, OutputFormatter::FORMAT_AMBER);
+                $wordOutput .= OutputFormatter::formatString(
+                    " $upperChar ",
+                    OutputFormatter::FORMAT_AMBER
+                );
 
                 $this->keyboardOutput->colorCharKey($char, OutputFormatter::FORMAT_AMBER);
 
                 $finalResultWord .= "A";
             } else {
-                $wordOutput .= OutputFormatter::formatString($char, OutputFormatter::FORMAT_INVALID);
+                $wordOutput .= OutputFormatter::formatString(
+                    " $upperChar ",
+                    OutputFormatter::FORMAT_INVALID
+                );
 
                 $this->keyboardOutput->colorCharKey($char, OutputFormatter::FORMAT_INVALID);
 
