@@ -139,7 +139,7 @@ class WordleTest extends TestCase
         $this->assertStringNotContainsString('│' . self::format('E', 'G') . '│', $output);
 
         $this->assertStringContainsString(
-            self::format(' T E S T S ', 'G', false),
+            self::format(' T  E  S  T  S ', 'G', false),
             $output
         );
         $this->assertStringContainsString('TESTSHARESTRING', $output);

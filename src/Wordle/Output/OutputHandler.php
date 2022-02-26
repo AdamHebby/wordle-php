@@ -95,8 +95,8 @@ class OutputHandler implements OutputInterface
         $this->wordleOutput->addWordleAttempt(
             OutputFormatter::formatString(
                 implode('', array_map(function (string $str) {
-                    return " $str";
-                }, str_split(strtoupper($guess)))) . ' ',
+                    return " $str ";
+                }, str_split(strtoupper($guess)))),
                 OutputFormatter::FORMAT_GREEN
             )
         );
