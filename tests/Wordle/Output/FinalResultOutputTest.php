@@ -26,6 +26,6 @@ class FinalResultOutputTest extends TestCase
         $output->addWordleAttempt('GAIAG');
 
         $this->assertStringContainsString('🟩🟩🟩🟩🟩', $output->getOutput());
-        $this->assertStringContainsString('🟩🟧⬛🟧🟩', $output->getOutput());
+        $this->assertStringContainsString('🟩🟨⬛🟨🟩', $output->getOutput());
     }
 }

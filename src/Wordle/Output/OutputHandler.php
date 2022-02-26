@@ -93,7 +93,12 @@ class OutputHandler implements OutputInterface
     public function addValidGuess(string $guess): void
     {
         $this->wordleOutput->addWordleAttempt(
-            OutputFormatter::formatString($guess, OutputFormatter::FORMAT_GREEN)
+            OutputFormatter::formatString(
+                implode('', array_map(function (string $str) {
+                    return " $str";
+                }, str_split(strtoupper($guess)))) . ' ',
+                OutputFormatter::FORMAT_GREEN
+            )
         );
 
         $this->finalResultOutput->addWordleAttempt(
