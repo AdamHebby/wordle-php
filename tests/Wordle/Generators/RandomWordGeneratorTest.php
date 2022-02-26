@@ -40,7 +40,7 @@ class RandomWordGeneratorTest extends TestCase
     public function testForceWord()
     {
         $generator = new RandomWordGenerator();
-        $generator->setWordIndex(1);
+        $generator->setWordIndex(0);
 
         $this->assertSame('aback', $generator->generateWord());
     }

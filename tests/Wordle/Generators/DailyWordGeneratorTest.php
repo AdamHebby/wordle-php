@@ -12,7 +12,7 @@ class DailyWordGeneratorTest extends TestCase
     public function testGeneration()
     {
         $generator = new DailyWordGenerator();
-        $dateTime = new \DateTime('now', new \DateTimeZone('UTC'));
+        $dateTime = new \DateTime('2022-01-01', new \DateTimeZone('UTC'));
 
         $words = [];
         for ($i = 0; $i <= 50; $i++) {

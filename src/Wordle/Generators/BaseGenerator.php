@@ -2,11 +2,15 @@
 
 namespace Wordle\Generators;
 
+use Wordle\Traits\WordFileAwareTrait;
+
 /**
  * Base Abstract Generator, provides most generator functionality
  */
 abstract class BaseGenerator implements GeneratorInterface
 {
+    use WordFileAwareTrait;
+
     /**
      * Minimum word length we have configured
      */
@@ -50,7 +54,7 @@ abstract class BaseGenerator implements GeneratorInterface
 
     public function generateWord(): string
     {
-        $wordFile = $this->getWordFile();
+        $wordFile = $this->getWordFile($this->wordLength);
 
         // Get the last line
         $wordFile->seek(PHP_INT_MAX);
@@ -80,17 +84,5 @@ abstract class BaseGenerator implements GeneratorInterface
         }
 
         return rand(0, $maxLine);
-    }
-
-    /**
-     * Gets the associated word file from the current word length
-     *
-     * @return \SplFileObject
-     */
-    protected function getWordFile(): \SplFileObject
-    {
-        $file = __DIR__ . "/../../../resources/{$this->wordLength}-letter-words.txt";
-
-        return new \SplFileObject($file);
     }
 }

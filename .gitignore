@@ -2,3 +2,4 @@
 tests/coverage/
 .phpunit.cache
 clover.xml
+resources/*-letter-words.txt
