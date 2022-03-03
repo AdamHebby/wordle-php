@@ -135,12 +135,11 @@ class OutputHandler implements OutputInterface
      */
     public function addInvalidGuess(string $guess, string $realWord): void
     {
-        $cheating = stristr($guess, '?') !== false;
-        $splitGuess = str_split($guess);
-        $splitWord = str_split($realWord);
-        $wordOutput = "";
+        $splitGuess      = str_split($guess);
+        $splitWord       = str_split($realWord);
+        $wordOutput      = "";
         $finalResultWord = "";
-        $usedLetters = array_count_values($splitWord);
+        $usedLetters     = array_count_values($splitWord);
 
         $this->cheatingOutput->addGuessedWord($guess);
 
@@ -154,10 +153,7 @@ class OutputHandler implements OutputInterface
                 );
 
                 $this->keyboardOutput->colorCharKey($char, OutputFormatter::FORMAT_GREEN);
-
-                if (!$cheating) {
-                    $this->cheatingOutput->addCorrectLetter($key, $char);
-                }
+                $this->cheatingOutput->addCorrectLetter($key, $char);
 
                 $finalResultWord .= "G";
             } elseif (in_array($char, $splitWord) && ($usedLetters[$char] ?? 0) !== 0) {
@@ -167,10 +163,7 @@ class OutputHandler implements OutputInterface
                 );
 
                 $this->keyboardOutput->colorCharKey($char, OutputFormatter::FORMAT_AMBER);
-
-                if (!$cheating) {
-                    $this->cheatingOutput->addValidLetter($key, $char);
-                }
+                $this->cheatingOutput->addValidLetter($key, $char);
 
                 $finalResultWord .= "A";
             } else {
@@ -180,10 +173,7 @@ class OutputHandler implements OutputInterface
                 );
 
                 $this->keyboardOutput->colorCharKey($char, OutputFormatter::FORMAT_INVALID);
-
-                if (!$cheating) {
-                    $this->cheatingOutput->addInvalidLetter($char);
-                }
+                $this->cheatingOutput->addInvalidLetter($char);
 
                 $finalResultWord .= "I";
             }
@@ -195,7 +185,6 @@ class OutputHandler implements OutputInterface
 
         $this->wordleOutput->addWordleAttempt($wordOutput);
         $this->finalResultOutput->addWordleAttempt($finalResultWord);
-
         $this->guessCount++;
     }
 }
