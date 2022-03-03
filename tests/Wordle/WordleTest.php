@@ -28,6 +28,38 @@ class WordleTest extends TestCase
         $this->assertFalse($wordle->isValidGuess('tests'));
     }
 
+    public function testCheatingGivesCorrectResponse()
+    {
+        $generator = new FixedTestGenerator();
+        $generator->setWords(['tests']);
+        $wordle = new Wordle($generator);
+
+        $wordle->attemptGuess('??');
+
+        $this->assertStringContainsString('tests', $wordle->getOutput());
+        $this->assertStringContainsString(
+            self::format(' *  *  *  *  * ', 'C'),
+            $wordle->getOutput()
+        );
+    }
+
+
+    public function testCheatingGivesCorrectResponses()
+    {
+        $generator = new FixedTestGenerator();
+        $generator->setWords(['tests']);
+        $wordle = new Wordle($generator);
+
+        $wordle->attemptGuess('taste');
+        $wordle->attemptGuess('?');
+
+        $this->assertStringContainsString('tests', $wordle->getOutput());
+        $this->assertStringContainsString(
+            self::format(' ?  ?  ?  ?  ? ', 'C'),
+            $wordle->getOutput()
+        );
+    }
+
     public function testAttemptGuessInvalidWord()
     {
         $wordle = new Wordle(new RandomWordGenerator());
@@ -172,6 +204,9 @@ class WordleTest extends TestCase
                 break;
             case 'I':
                 $format = OutputFormatter::FORMAT_INVALID;
+                break;
+            case 'C':
+                $format = OutputFormatter::FORMAT_RED;
                 break;
         }
 
