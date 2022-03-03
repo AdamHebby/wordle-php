@@ -31,6 +31,7 @@ class OutputFormatter
     public const FORMAT_DEF = 0;
     public const FORMAT_GREEN = 1;
     public const FORMAT_AMBER = 2;
+    public const FORMAT_RED = 3;
     public const FORMAT_NONE = 4;
     public const FORMAT_ERROR = 5;
     public const FORMAT_INVALID = 6;
@@ -53,6 +54,9 @@ class OutputFormatter
                 break;
             case self::FORMAT_AMBER:
                 $formatString .= self::format(self::COLOR_TXT_WHITE, self::COLOR_BG_AMBER);
+                break;
+            case self::FORMAT_RED:
+                $formatString .= self::format(self::COLOR_TXT_WHITE, self::COLOR_BG_RED);
                 break;
             case self::FORMAT_ERROR:
                 $formatString .= self::format(self::COLOR_TXT_RED);

@@ -43,6 +43,22 @@ If your friend has tried word #123, you can replace WORD_NUMBER with this to use
 
 <img height="250px" src=".github/images/8-letters-specific.png" alt="834">
 
+### Cheating
+
+Make no mistake, this is cheating, you cheater!
+
+When wordle asks for a word, you can enter `?` for suggestions and `??` for the answer.
+
+Suggestions are only as good as your guesses, it's limited to 10 results but will tell you if there are more. If you haven't guessed any words yet, it will try and recommend every word.
+
+Cheating will show up on your share code with red question marks (?) for suggestions and red asterisks (*) for full-on cheating.
+
+<img height="300px" src=".github/images/cheating-suggestions.png" alt="834"><img height="300px" src=".github/images/cheating-answer.png" alt="834">
+
+Try not to use this, but I know how annoying it is when you can't solve a wordle but never find out the answer, now you can!
+
+THIS WILL NOT HELP YOU CHEAT ON OTHER VERSIONS OF WORDLE.
+
 ## Installation
 
 `composer global require adamhebby/wordle-php`

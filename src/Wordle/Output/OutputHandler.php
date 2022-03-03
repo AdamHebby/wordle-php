@@ -29,6 +29,12 @@ class OutputHandler implements OutputInterface
     public $wordleOutput;
 
     /**
+     * Cheating Output
+     *
+     * @var CheatingOutput
+     */
+    public $cheatingOutput;
+    /**
      * How many guesses?
      *
      * @var int
@@ -47,6 +53,7 @@ class OutputHandler implements OutputInterface
         $this->keyboardOutput    = new KeyboardOutput();
         $this->finalResultOutput = new FinalResultOutput();
         $this->wordleOutput      = new WordleOutput();
+        $this->cheatingOutput    = new CheatingOutput();
 
         $this->finalResultOutput->setShareString($shareString);
     }
@@ -73,7 +80,7 @@ class OutputHandler implements OutputInterface
         } else {
             $return .= "SHARE:\n" .
                 $this->finalResultOutput->getOutput() .
-                "\n Guesses: " . $this->guessCount . "\n\n";
+                "\nGuesses: " . $this->guessCount . "\n\n";
         }
 
         $return .= implode("\n", $this->temporaryOutput);
@@ -107,6 +114,17 @@ class OutputHandler implements OutputInterface
         $this->guessCount++;
     }
 
+    public function addCheatingOutput(int $wordLength, bool $fullCheat = false): void
+    {
+        $this->finalResultOutput->addWordleAttempt(str_repeat('C', $wordLength));
+        $this->wordleOutput->addWordleAttempt(OutputFormatter::formatString(
+            str_repeat($fullCheat ? ' * ' : ' ? ', $wordLength),
+            OutputFormatter::FORMAT_RED
+        ));
+
+        $this->guessCount++;
+    }
+
     /**
      * Add an invalid guess
      *
@@ -117,11 +135,14 @@ class OutputHandler implements OutputInterface
      */
     public function addInvalidGuess(string $guess, string $realWord): void
     {
+        $cheating = stristr($guess, '?') !== false;
         $splitGuess = str_split($guess);
         $splitWord = str_split($realWord);
         $wordOutput = "";
         $finalResultWord = "";
         $usedLetters = array_count_values($splitWord);
+
+        $this->cheatingOutput->addGuessedWord($guess);
 
         foreach ($splitGuess as $key => $char) {
             $upperChar = strtoupper($char);
@@ -134,6 +155,10 @@ class OutputHandler implements OutputInterface
 
                 $this->keyboardOutput->colorCharKey($char, OutputFormatter::FORMAT_GREEN);
 
+                if (!$cheating) {
+                    $this->cheatingOutput->addCorrectLetter($key, $char);
+                }
+
                 $finalResultWord .= "G";
             } elseif (in_array($char, $splitWord) && ($usedLetters[$char] ?? 0) !== 0) {
                 $wordOutput .= OutputFormatter::formatString(
@@ -142,6 +167,10 @@ class OutputHandler implements OutputInterface
                 );
 
                 $this->keyboardOutput->colorCharKey($char, OutputFormatter::FORMAT_AMBER);
+
+                if (!$cheating) {
+                    $this->cheatingOutput->addValidLetter($key, $char);
+                }
 
                 $finalResultWord .= "A";
             } else {
@@ -152,6 +181,10 @@ class OutputHandler implements OutputInterface
 
                 $this->keyboardOutput->colorCharKey($char, OutputFormatter::FORMAT_INVALID);
 
+                if (!$cheating) {
+                    $this->cheatingOutput->addInvalidLetter($char);
+                }
+
                 $finalResultWord .= "I";
             }
 
@@ -161,9 +194,8 @@ class OutputHandler implements OutputInterface
         }
 
         $this->wordleOutput->addWordleAttempt($wordOutput);
-
-
         $this->finalResultOutput->addWordleAttempt($finalResultWord);
+
         $this->guessCount++;
     }
 }

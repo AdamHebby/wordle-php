@@ -65,6 +65,21 @@ class Wordle
 
         $guessAttempt = strtolower($guessAttempt);
 
+        if ($guessAttempt === '?') {
+            $this->output->addTemporaryOutput(
+                $this->output->cheatingOutput->getOutput()
+            );
+
+            $this->output->addCheatingOutput(strlen($this->word));
+            return;
+        }
+
+        if ($guessAttempt === '??') {
+            $this->output->addTemporaryOutput('ANSWER: ' . $this->word . "\n");
+            $this->output->addCheatingOutput(strlen($this->word), true);
+            return;
+        }
+
         if (!$this->validator->validateRealWord($guessAttempt)) {
             $this->output->addTemporaryOutput(OutputFormatter::formatString(
                 "ERR: $guessAttempt is not a real word! \n",

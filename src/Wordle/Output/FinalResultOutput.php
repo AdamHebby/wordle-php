@@ -32,9 +32,11 @@ final class FinalResultOutput implements OutputInterface
      */
     public function addWordleAttempt(string $line): void
     {
-        $line = str_replace("G", "🟩", $line);
-        $line = str_replace("A", "🟨", $line);
-        $line = str_replace("I", "⬛", $line);
+        // TODO: Set to constants?
+        $line = str_replace("G", "🟩", $line); // Good
+        $line = str_replace("A", "🟨", $line); // Allowed
+        $line = str_replace("I", "⬛", $line); // Invalid
+        $line = str_replace("C", "🟥", $line); // Cheating
 
         $this->finalResult[] = $line;
     }
